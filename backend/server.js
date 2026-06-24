@@ -25,16 +25,18 @@ dotenv.config();
 const app = express();
 const httpServer = createServer(app);
 
+const clientOrigin = process.env.APP_BASE_URL || "http://localhost:3000";
+
 const io = new SocketIOServer(httpServer, {
   cors: {
-    origin: "http://localhost:3000",
+    origin: clientOrigin,
     credentials: true
   }
 });
 
 app.use(
   cors({
-    origin: "http://localhost:3000",
+    origin: clientOrigin,
     credentials: true
   })
 );
