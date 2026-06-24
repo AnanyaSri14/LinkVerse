@@ -1,7 +1,9 @@
 import Profile from "../models/profile.model.js";
 import User from "../models/user.models.js";
 import fs from "fs";
-import pdfParse from "pdf-parse";
+import { createRequire } from "module";
+const require = createRequire(import.meta.url);
+const pdfParse = require("pdf-parse");
 
 const publicUserFields = "name username email profilePicture";
 
