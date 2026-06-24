@@ -2,6 +2,11 @@
 
 LinkVerse is a modern, real-time professional networking platform designed to connect users, facilitate real-time chat, and build professional relationships. Built on the MERN stack with Next.js/React.js, Node.js, Express, MongoDB, and Socket.io.
 
+## 🔗 Live Deployments
+
+- **Frontend App:** `https://<your-vercel-deployment-name>.vercel.app`
+- **Backend API:** `https://<your-render-service-name>.onrender.com`
+
 ---
 
 ## 📸 Overview & Chat Flow
