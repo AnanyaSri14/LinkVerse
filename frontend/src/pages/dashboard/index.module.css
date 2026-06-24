@@ -1,0 +1,583 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.composerCard,
+.feedCard,
+.loadingState,
+.emptyState {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 16px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+}
+
+.composerCard,
+.feedCard {
+  padding: 1rem;
+}
+
+.composerHeader,
+.feedHeader,
+.singleCardHeader,
+.commentsHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.profileRow,
+.profileIdentity,
+.profileNameRow,
+.composerProfileRow,
+.composerIdentity {
+  display: flex;
+}
+
+.profileRow {
+  align-items: flex-start;
+  gap: 0.85rem;
+  flex: 1;
+  min-width: 0;
+}
+
+.profileIdentity {
+  flex-direction: column;
+  min-width: 0;
+}
+
+.composerProfileRow {
+  align-items: center;
+  gap: 0.85rem;
+  min-width: 0;
+}
+
+.composerIdentity {
+  flex-direction: column;
+  min-width: 0;
+}
+
+.composerPromptBlock {
+  max-width: 420px;
+}
+
+.composerMetaText {
+  margin-top: 0.18rem;
+  color: #0a66c2;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.profileNameRow {
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.composerHeader h2,
+.feedHeader h2,
+.commentsHeader h3,
+.nameText {
+  margin: 0;
+}
+
+.composerHeader p,
+.feedHeader p,
+.commentsHeader p,
+.handleText,
+.timeText,
+.statsRow {
+  color: #666666;
+}
+
+.userProfile,
+.singleCard__userProfile,
+.singleComment_profileContainer img {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #eef2f7;
+  flex-shrink: 0;
+}
+
+.textAreaOfContent,
+.postCommentContainer input {
+  width: 100%;
+  border: 1px solid #d0d5dd;
+  border-radius: 14px;
+  padding: 0.9rem 1rem;
+  font: inherit;
+  outline: none;
+}
+
+.textAreaOfContent {
+  min-height: 120px;
+  resize: vertical;
+  margin-top: 1rem;
+}
+
+.composerFooter,
+.filterGroup,
+.ownerActions,
+.editActions,
+.statsRow,
+.optionsContainer,
+.editRow,
+.checkboxRow {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.composerFooter,
+.optionsContainer {
+  justify-content: space-between;
+}
+
+.primaryButton,
+.secondaryButton,
+.filePicker,
+.filterButton,
+.filterButtonActive,
+.singleOption,
+.singleOptionActive,
+.inlineAction,
+.inlineDanger {
+  border: none;
+  cursor: pointer;
+  font: inherit;
+}
+
+.primaryButton,
+.filterButtonActive {
+  background: #0a66c2;
+  color: white;
+}
+
+.primaryButton,
+.secondaryButton,
+.filePicker,
+.filterButton,
+.filterButtonActive {
+  border-radius: 999px;
+  padding: 0.7rem 1.1rem;
+}
+
+.secondaryButton,
+.filterButton,
+.filePicker {
+  background: #eef3f8;
+  color: #344054;
+}
+
+.filePicker {
+  display: inline-flex;
+  align-items: center;
+}
+
+.inlineAction,
+.inlineDanger {
+  background: transparent;
+  padding: 0;
+  font-size: 0.95rem;
+}
+
+.inlineAction {
+  color: #0a66c2;
+}
+
+.inlineDanger {
+  color: #d92d20;
+}
+
+.authorBadge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  background: #eef3f8;
+  color: #344054;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.nameText {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.35;
+  color: #111827;
+  overflow-wrap: anywhere;
+}
+
+.handleText {
+  margin: 0.12rem 0 0;
+  font-size: 0.92rem;
+}
+
+.timeText {
+  margin: 0.1rem 0 0;
+  font-size: 0.85rem;
+}
+
+.postsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  margin-top: 1rem;
+}
+
+.singleCard {
+  border: 1px solid #d9e0e7;
+  border-radius: 12px;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+.singleCardHeader {
+  padding: 0.95rem 1rem 0.8rem;
+}
+
+.ownerActions {
+  flex-shrink: 0;
+  padding-top: 0.2rem;
+}
+
+.postBody {
+  margin: 0;
+  padding: 0 1rem;
+  line-height: 1.6;
+  color: #1f2937;
+  white-space: pre-wrap;
+}
+
+.singleCard__image {
+  margin-top: 0.9rem;
+  background: #f3f2ef;
+  border-top: 1px solid #eef2f7;
+  border-bottom: 1px solid #eef2f7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.75rem;
+}
+
+.postImage {
+  width: 100%;
+  max-width: 620px;
+  max-height: 380px;
+  object-fit: contain;
+  display: block;
+  border-radius: 10px;
+  background: white;
+}
+
+.statsRow {
+  justify-content: space-between;
+  padding: 0.75rem 1rem 0;
+  font-size: 0.92rem;
+}
+
+.optionsContainer {
+  margin-top: 0.45rem;
+  padding: 0.75rem 0.85rem 0.9rem;
+  border-top: 1px solid #eef2f7;
+}
+
+.singleOption,
+.singleOptionActive {
+  flex: 1;
+  text-align: center;
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  transition: background-color 0.2s ease;
+}
+
+.singleOption {
+  background: transparent;
+  color: #4b5563;
+}
+
+.singleOption:hover {
+  background: #eef3f8;
+}
+
+.singleOptionActive {
+  background: #e7f3ff;
+  color: #0a66c2;
+  font-weight: 600;
+}
+
+.editContainer {
+  margin-top: 0.25rem;
+  padding: 0 1rem 1rem;
+}
+
+.checkboxRow {
+  color: #344054;
+}
+
+.checkboxRow input {
+  margin: 0;
+}
+
+.commentsContainer {
+  position: fixed;
+  inset: 0;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(15, 23, 42, 0.65);
+  padding: 1rem;
+}
+
+.shareModalOverlay {
+  position: fixed;
+  inset: 0;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(15, 23, 42, 0.6);
+  padding: 1rem;
+}
+
+.shareModal {
+  width: min(760px, 100%);
+  max-height: 88vh;
+  overflow: auto;
+  background: white;
+  border-radius: 22px;
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.shareModalHeader,
+.shareSectionHeader,
+.shareRecipientCard,
+.shareRecipientInfo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.shareModalHeader h3,
+.shareSectionHeader h4,
+.shareRecipientInfo p,
+.sharePreviewTitle {
+  margin: 0;
+}
+
+.shareModalHeader p,
+.shareSectionHeader p,
+.shareRecipientInfo span,
+.sharePreviewBody,
+.shareEmptyState {
+  color: #667085;
+}
+
+.sharePreviewCard {
+  border: 1px solid #d9e0e7;
+  border-radius: 16px;
+  padding: 1rem;
+  background: #f8fbff;
+}
+
+.sharePreviewTitle {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #111827;
+}
+
+.sharePreviewBody {
+  margin: 0.45rem 0 0;
+  line-height: 1.6;
+}
+
+.sharePreviewLink {
+  display: inline-block;
+  margin-top: 0.7rem;
+  color: #0a66c2;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+
+.shareSection {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.shareSearchInput {
+  width: 100%;
+  border: 1px solid #d0d5dd;
+  border-radius: 14px;
+  padding: 0.85rem 1rem;
+  font: inherit;
+  outline: none;
+}
+
+.shareRecipientList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  max-height: 260px;
+  overflow: auto;
+  padding-right: 0.2rem;
+}
+
+.shareRecipientCard {
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 0.8rem 0.9rem;
+  background: white;
+}
+
+.shareRecipientInfo img {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #eef2f7;
+}
+
+.shareRecipientInfo p {
+  font-size: 0.98rem;
+  font-weight: 600;
+  color: #111827;
+}
+
+.shareRecipientInfo span {
+  display: block;
+  margin-top: 0.16rem;
+  font-size: 0.9rem;
+}
+
+.shareEmptyState {
+  margin: 0;
+  text-align: center;
+  padding: 0.8rem;
+}
+
+.shareActionGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.8rem;
+}
+
+.shareActionButton {
+  border: 1px solid #d0d5dd;
+  background: white;
+  color: #111827;
+  border-radius: 14px;
+  padding: 0.9rem 1rem;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.allCommentsContainer {
+  width: min(720px, 100%);
+  max-height: 85vh;
+  background: white;
+  border-radius: 18px;
+  padding: 1.1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.commentsList {
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  padding-right: 0.3rem;
+}
+
+.singleComment {
+  padding: 1rem;
+  border-radius: 14px;
+  background: #f8fbff;
+}
+
+.singleComment_profileContainer {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  margin-bottom: 0.75rem;
+}
+
+.postCommentContainer {
+  display: flex;
+  gap: 0.85rem;
+  align-items: center;
+}
+
+.postCommentContainer input {
+  flex: 1;
+}
+
+.loadingState,
+.emptyState {
+  padding: 1.2rem;
+  text-align: center;
+}
+
+.emptyCommentState {
+  text-align: center;
+  color: #667085;
+}
+
+.loadMoreTrigger {
+  height: 10px;
+}
+
+@media (max-width: 900px) {
+  .composerHeader,
+  .feedHeader,
+  .singleCardHeader,
+  .commentsHeader,
+  .composerFooter,
+  .optionsContainer,
+  .statsRow,
+  .postCommentContainer,
+  .editRow {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .profileRow {
+    width: 100%;
+  }
+
+  .ownerActions {
+    padding-top: 0;
+  }
+
+  .singleOption,
+  .singleOptionActive {
+    width: 100%;
+  }
+
+  .composerPromptBlock {
+    max-width: 100%;
+  }
+
+  .shareModalHeader,
+  .shareSectionHeader,
+  .shareRecipientCard {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .shareActionGrid {
+    grid-template-columns: 1fr;
+  }
+}

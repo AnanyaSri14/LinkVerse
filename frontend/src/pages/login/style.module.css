@@ -1,0 +1,133 @@
+.container {
+  display: flex;
+  justify-content: center;
+  height: 90svh;
+  align-items: center;
+  background:
+    radial-gradient(circle at top left, rgba(10, 102, 194, 0.16), transparent 28%),
+    linear-gradient(135deg, #f8fbff 0%, #eef6ff 50%, #ffffff 100%);
+}
+.cardContainer {
+  height: 80vh;
+  display: flex;
+  border-radius: 24px;
+  overflow: hidden;
+  width: 80vw;
+  background: white;
+  box-shadow: 0 24px 42px rgba(15, 23, 42, 0.12);
+}
+.cardContainer__left {
+  flex: 0.6;
+  padding: 2rem;
+  text-align: center;
+}
+.inputField {
+  padding-inline: 1.3rem;
+  padding-block: 0.8rem;
+  outline: none;
+  border-radius: 14px;
+  border: 1px solid silver;
+  width: 100%;
+}
+.inputContainers{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 1.3rem;
+  max-width: 400px;
+  margin:0 auto;
+  gap: 1.5rem;
+}
+.buttonWithOutline{
+  padding: 0.8rem 1.3rem;
+  background: rgb(236, 236, 236);
+  border-radius: 14px;
+  cursor: pointer;
+  color: black;
+  max-width: 400px;
+  margin: 1.5rem auto 0 auto;
+  width: 100%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+.inputRow{
+  width: fit-content;
+  display: flex;
+  gap: 1rem;
+}
+.cardContainer__right {
+  flex: 0.4;
+  background: #00488b;
+  display: flex;
+  color: white;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1.2rem;
+  padding-inline: 1.2rem;
+  align-items: center;
+  padding-top: 1.3rem;
+}
+.cardleft_heading{
+  font-weight: bold;
+  font-size: 1.8rem;
+}
+
+.modeDescription {
+  color: #667085;
+  font-size: 0.98rem;
+  line-height: 1.5;
+  max-width: 420px;
+  margin: 0.75rem auto 0;
+}
+
+.modePanel {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  width: 100%;
+  max-width: 260px;
+}
+
+.modePanelTitle {
+  text-align: center;
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 0.35rem;
+}
+
+.modeButton {
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.buttonSolid {
+  padding: 0.8rem 1.3rem;
+  border-radius: 14px;
+  cursor: pointer;
+  color: #00488b;
+  background: white;
+  width: 100%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.textButton {
+  border: none;
+  background: transparent;
+  color: #0a66c2;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.modeButtonPrompt {
+  font-size: 0.88rem;
+  opacity: 0.78;
+}
+
+.modeButtonLabel {
+  font-size: 1rem;
+  font-weight: 600;
+}

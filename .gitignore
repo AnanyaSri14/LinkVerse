@@ -1,0 +1,52 @@
+# Dependencies
+node_modules/
+jspm_packages/
+web_modules/
+
+# Next.js build and cache
+.next/
+out/
+
+# Production build outputs
+build/
+dist/
+
+# Debug and Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+*.log
+logs/
+*.log*
+
+# Testing
+coverage/
+
+# Environment variables (Must never be committed)
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env*.local
+
+# System/OS Files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Editors and IDEs
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Project-specific ignores
+# Ignore uploaded files in backend/uploads, but preserve the fallback default profile picture
+backend/uploads/*
+!backend/uploads/default.jpg

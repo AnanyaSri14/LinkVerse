@@ -1,0 +1,170 @@
+.container {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  padding: 1rem 1.2rem 0.8rem;
+  background:
+    linear-gradient(180deg, rgba(244, 249, 255, 0.96), rgba(244, 249, 255, 0.78));
+  backdrop-filter: blur(14px);
+}
+
+.navBar {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0.95rem 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(208, 213, 221, 0.7);
+  box-shadow: 0 16px 32px rgba(15, 23, 42, 0.08);
+}
+
+.brand,
+.buttonJoin,
+.navAction,
+.navActionPrimary {
+  border: none;
+  font: inherit;
+  cursor: pointer;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.9rem;
+  background: transparent;
+  color: #101828;
+}
+
+.brandMark {
+  width: 44px;
+  height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #0a66c2 0%, #1e7dd8 100%);
+  color: white;
+  font-size: 1rem;
+  box-shadow: 0 12px 24px rgba(10, 102, 194, 0.22);
+}
+
+.brandSymbol {
+  width: 28px;
+  height: 28px;
+}
+
+.brandLine {
+  fill: none;
+  stroke: rgba(255, 255, 255, 0.9);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 3.6;
+}
+
+.brandNode,
+.brandNodeCore {
+  fill: white;
+}
+
+.brandNodeCore {
+  opacity: 0.92;
+}
+
+.brandText {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.15rem;
+}
+
+.brandText strong {
+  font-size: 1.8rem;
+  line-height: 1;
+}
+
+.brandText small {
+  color: #667085;
+  font-size: 0.82rem;
+}
+
+.navBarOptionContainer,
+.authActions {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.greetingPill {
+  display: flex;
+  flex-direction: column;
+  gap: 0.08rem;
+  padding: 0.7rem 0.95rem;
+  border-radius: 18px;
+  background: linear-gradient(180deg, #f9fbff 0%, #eef6ff 100%);
+  border: 1px solid #d6e7fb;
+  min-width: 190px;
+}
+
+.greetingLabel {
+  color: #667085;
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.navAction,
+.navActionPrimary,
+.buttonJoin {
+  padding: 0.72rem 1.1rem;
+  border-radius: 999px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.navAction {
+  background: #eef3f8;
+  color: #344054;
+}
+
+.navActionPrimary,
+.buttonJoin {
+  color: white;
+  box-shadow: 0 10px 18px rgba(10, 102, 194, 0.2);
+}
+
+.navActionPrimary {
+  background: linear-gradient(135deg, #0a66c2 0%, #1e7dd8 100%);
+}
+
+.buttonJoin {
+  background: linear-gradient(180deg, #f8fbff 0%, #eef6ff 100%);
+  color: #0a66c2;
+  border: 1px solid #cfe2f8;
+  box-shadow: 0 10px 18px rgba(10, 102, 194, 0.08);
+}
+
+.navAction:hover,
+.navActionPrimary:hover,
+.buttonJoin:hover,
+.brand:hover {
+  transform: translateY(-1px);
+}
+
+@media (max-width: 960px) {
+  .navBar,
+  .authActions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .navBarOptionContainer {
+    width: 100%;
+  }
+
+  .brandText strong {
+    font-size: 1.5rem;
+  }
+}

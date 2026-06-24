@@ -1,0 +1,245 @@
+.container {
+  padding: 1.3rem;
+  background-color: #fcfdff;
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+  border-radius: 24px;
+}
+
+.heroSection,
+.sectionCard,
+.recentActivitySection {
+  background: white;
+  border-radius: 24px;
+  box-shadow: 0 14px 30px rgba(15, 23, 42, 0.08);
+}
+
+.heroSection {
+  overflow: hidden;
+}
+
+.backDropContainer {
+  width: 100%;
+  height: 260px;
+  position: relative;
+}
+
+.backDrop,
+.backDropFallback {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.backDropFallback {
+  background:
+    radial-gradient(circle at top left, rgba(255, 255, 255, 0.38), transparent 30%),
+    linear-gradient(135deg, #0a66c2 0%, #49a9f5 55%, #d4ebff 100%);
+}
+
+.heroProfileRow {
+  display: flex;
+  gap: 1.4rem;
+  padding: 0 1.5rem 1.5rem;
+  margin-top: -56px;
+  align-items: flex-end;
+  position: relative;
+  z-index: 1;
+}
+
+.avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid white;
+  background: white;
+}
+
+.heroText {
+  flex: 1;
+}
+
+.titleRow,
+.metaRow,
+.projectHeader,
+.postMetaRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.titleRow {
+  align-items: flex-start;
+}
+
+.titleRow h1,
+.sectionCard h3,
+.recentActivitySection h3,
+.projectCard h4 {
+  margin: 0;
+}
+
+.usernameText,
+.taglineText,
+.companyText,
+.durationText,
+.postMetaRow,
+.metaRow {
+  color: #667085;
+}
+
+.taglineText {
+  margin: 0.55rem 0 0;
+  font-size: 1rem;
+}
+
+.metaRow {
+  margin-top: 0.8rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.metaRow span {
+  padding: 0.45rem 0.85rem;
+  border-radius: 999px;
+  background: #f4f7fb;
+}
+
+.profileContent {
+  display: flex;
+  gap: 1.4rem;
+  align-items: flex-start;
+}
+
+.profileMainColumn {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.sectionCard,
+.recentActivitySection {
+  padding: 1.3rem;
+}
+
+.skillGrid,
+.projectGrid,
+.workHistoryContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+  margin-top: 1rem;
+}
+
+.skillPill {
+  padding: 0.65rem 0.95rem;
+  border-radius: 999px;
+  background: #eef6ff;
+  color: #0a66c2;
+  font-weight: 600;
+}
+
+.projectCard {
+  flex: 1 1 220px;
+  padding: 1rem;
+  border-radius: 18px;
+  background: #f8fbff;
+}
+
+.projectCard a {
+  color: #0a66c2;
+  text-decoration: none;
+}
+
+.workHistoryCard {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+  padding: 1rem;
+  border-radius: 18px;
+  background: #f8fbff;
+}
+
+.timelineDot {
+  width: 12px;
+  height: 12px;
+  margin-top: 0.35rem;
+  border-radius: 50%;
+  background: #0a66c2;
+  box-shadow: 0 0 0 6px rgba(10, 102, 194, 0.13);
+}
+
+.recentActivitySection {
+  width: 320px;
+}
+
+.postCard {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 1rem;
+  padding: 0.95rem;
+  border-radius: 18px;
+  background: #f8fbff;
+}
+
+.postMedia {
+  width: 100%;
+  max-width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 14px;
+}
+
+.postCaption {
+  margin: 0;
+  line-height: 1.5;
+  color: #1f2937;
+}
+
+.postMetaRow {
+  font-size: 0.92rem;
+}
+
+.emptyActivity {
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 18px;
+  background: #f8fbff;
+  color: #667085;
+}
+
+.connectBtn,
+.connectedButton {
+  padding: 0.78rem 1.2rem;
+  border-radius: 999px;
+  cursor: pointer;
+  font: inherit;
+}
+
+.connectBtn {
+  background: #0a66c2;
+  color: white;
+  border: none;
+}
+
+.connectedButton {
+  border: 1px solid #0a66c2;
+  color: #0a66c2;
+  background: white;
+}
+
+@media (max-width: 980px) {
+  .profileContent {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .recentActivitySection {
+    width: 100%;
+  }
+}

@@ -1,0 +1,296 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.loadingState {
+  padding: 2rem;
+  border-radius: 18px;
+  background-color: white;
+}
+
+.hero {
+  overflow: hidden;
+  border-radius: 24px;
+  background: linear-gradient(135deg, #f5f9ff 0%, #ffffff 65%, #eef6ff 100%);
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+}
+
+.coverPreview {
+  height: 220px;
+  background: linear-gradient(135deg, #0a66c2 0%, #7cc4ff 100%);
+}
+
+.coverPreview img,
+.coverFallback {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.coverFallback {
+  background: radial-gradient(circle at top left, rgba(255,255,255,0.35), transparent 35%),
+    linear-gradient(135deg, #0a66c2 0%, #5ab0ff 60%, #bde0ff 100%);
+}
+
+.heroContent {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  padding: 0 1.5rem 1.5rem;
+  margin-top: -46px;
+}
+
+.profileAvatar {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  border: 5px solid white;
+  object-fit: cover;
+  background-color: white;
+}
+
+.heroMeta {
+  color: #667085;
+}
+
+.card {
+  padding: 1.3rem;
+  border-radius: 20px;
+  background-color: white;
+  box-shadow: 0 10px 28px rgba(15, 23, 42, 0.08);
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.cardHeader p {
+  margin-top: 0.35rem;
+  color: #667085;
+}
+
+.primaryButton {
+  border: none;
+  background-color: #0a66c2;
+  color: white;
+  border-radius: 999px;
+  padding: 0.75rem 1.2rem;
+  cursor: pointer;
+}
+
+.secondaryButton {
+  border: 1px solid #d0d5dd;
+  background-color: white;
+  color: #344054;
+  border-radius: 999px;
+  padding: 0.75rem 1.2rem;
+  cursor: pointer;
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.field span {
+  font-size: 0.92rem;
+  color: #344054;
+}
+
+.field input,
+.field textarea,
+.inlineForm input,
+.stackForm input,
+.stackForm textarea {
+  width: 100%;
+  border: 1px solid #d0d5dd;
+  border-radius: 14px;
+  padding: 0.85rem 1rem;
+  outline: none;
+  font: inherit;
+}
+
+.fullWidth {
+  grid-column: 1 / -1;
+}
+
+.sectionGrid {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 1.5rem;
+}
+
+.inlineForm {
+  display: flex;
+  gap: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.stackForm {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.formActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.pillList,
+.itemList,
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.pillItem,
+.listItem {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.9rem 1rem;
+  border-radius: 16px;
+  background-color: #f8fbff;
+}
+
+.itemActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.itemActions button {
+  border: none;
+  background: transparent;
+  color: #0a66c2;
+  cursor: pointer;
+  padding: 0;
+}
+
+.timelineItem {
+  display: flex;
+  gap: 1rem;
+}
+
+.timelineDot {
+  width: 12px;
+  height: 12px;
+  margin-top: 0.4rem;
+  border-radius: 50%;
+  background-color: #0a66c2;
+  box-shadow: 0 0 0 6px rgba(10, 102, 194, 0.12);
+}
+
+.timelineContent {
+  flex: 1;
+  padding: 0.1rem 0 1rem;
+  border-bottom: 1px solid #eaecf0;
+}
+
+@media (max-width: 960px) {
+  .sectionGrid,
+  .formGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .inlineForm {
+    flex-direction: column;
+  }
+}
+
+.resumeUploadArea {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px dashed #0a66c2;
+  border-radius: 16px;
+  padding: 2.5rem 1.5rem;
+  background-color: #f5f9ff;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.resumeUploadArea:hover {
+  background-color: #eef6ff;
+  border-color: #004b8d;
+}
+
+.resumeLabel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+  cursor: pointer;
+  width: 100%;
+}
+
+.resumeIcon {
+  font-size: 2.5rem;
+}
+
+.resumeText {
+  font-weight: 500;
+  color: #0a66c2;
+}
+
+.resumeInput {
+  display: none;
+}
+
+.dangerCard {
+  border: 1px solid #fda29b;
+}
+
+.dangerText {
+  color: #b32318;
+}
+
+.dangerActions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.warningButton {
+  border: none;
+  background-color: #f79009;
+  color: white;
+  border-radius: 999px;
+  padding: 0.75rem 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.warningButton:hover {
+  background-color: #dc7603;
+}
+
+.dangerButton {
+  border: none;
+  background-color: #d92d20;
+  color: white;
+  border-radius: 999px;
+  padding: 0.75rem 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.dangerButton:hover {
+  background-color: #b32318;
+}

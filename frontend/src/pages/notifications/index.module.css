@@ -1,0 +1,133 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.header {
+  padding: 1.3rem;
+  background: white;
+  border-radius: 24px;
+  box-shadow: 0 14px 30px rgba(15, 23, 42, 0.08);
+}
+
+.header h2 {
+  margin: 0 0 0.35rem 0;
+  color: #101828;
+}
+
+.header p {
+  margin: 0;
+  color: #667085;
+}
+
+.notificationList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.95rem;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  padding: 1.2rem;
+  background: white;
+  border-radius: 24px;
+  border: 1px solid rgba(208, 213, 221, 0.5);
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.05);
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+  position: relative;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  background-color: #fafcfe;
+  box-shadow: 0 14px 28px rgba(15, 23, 42, 0.08);
+}
+
+.unread {
+  background-color: #f5f9ff;
+  border-color: rgba(10, 102, 194, 0.25);
+}
+
+.unread:hover {
+  background-color: #eef5ff;
+}
+
+.emoji {
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.avatar {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  object-fit: cover;
+  background-color: #f4f6f8;
+  border: 2px solid white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.systemIcon {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background-color: #f4f6f8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.title {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #101828;
+}
+
+.desc {
+  margin: 0;
+  font-size: 0.98rem;
+  color: #344054;
+  line-height: 1.45;
+}
+
+.time {
+  font-size: 0.82rem;
+  color: #98a2b3;
+}
+
+.unreadDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #0a66c2;
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  box-shadow: 0 0 0 4px rgba(10, 102, 194, 0.15);
+}
+
+.loading,
+.empty {
+  padding: 3rem;
+  text-align: center;
+  background: white;
+  border-radius: 24px;
+  box-shadow: 0 14px 30px rgba(15, 23, 42, 0.08);
+  color: #667085;
+  font-size: 1.1rem;
+}

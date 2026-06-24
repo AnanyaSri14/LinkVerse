@@ -1,0 +1,67 @@
+POST http://localhost:9090/register HTTP/1.1
+content-Type: application/json
+
+{
+ 
+  "name": "Rahul",
+  "username": "Rahul1",
+  "email": "rahul@test.com",
+  "password": "a"
+}
+
+
+###
+
+POST http://localhost:9090/login HTTP/1.1
+content-Type: application/json
+
+{
+  "email": "rahul@test.com",
+  "password": "a"
+}
+
+
+
+###
+
+GET http://localhost:9090/get_user_and_profile HTTP/1.1
+content-Type: application/json
+
+{
+  "token": "1774ccec9672fc894f28a0691414d1fd0141ec418e834cd632cb51fd0fb1416f"
+}
+
+###
+
+POST http://localhost:9090/update_profile_data HTTP/1.1
+content-Type: application/json
+
+{
+  "token": "9274a3ae1e7ebbdc29e4ed3c80634e49e881adc1f05a9f8ddd368e139608a4ce",
+  "bio": "hardworking individual",
+  "currentPost": "CTO",
+  "pastWork": [
+    { "company": "MICROSOFT", "position": "Engineer", "years": "2" }
+  ],
+  "education": [
+    { "school": "IIIT ALLAHABAD", "degree": "B.Tech", "fieldOfStudy": "IT" }
+  ]
+}
+
+
+###
+
+GET http://localhost:9090/users/get_all_users  HTTP/1.1
+###
+
+
+POST http://localhost:9090/update_profile_data
+Content-Type: application/json
+
+{
+  "token": "5812219986da3786f97efe56b3420e3e150b6a4fe2bbc14e9aff6bb4504a2412",
+  "bio": "hardworking individual",
+  "currentPost": "CTO",
+  "pastWork": [{"company": "Amazon", "position": "SDE-3", "years": "5 years"}],
+  "education": []
+}
