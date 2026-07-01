@@ -3,9 +3,9 @@ import jwt from "jsonwebtoken";
 import User from "../models/user.models.js";
 
 const ACCESS_TOKEN_SECRET =
-  process.env.JWT_ACCESS_SECRET || "linkverse-access-secret";
+  process.env.JWT_ACCESS_SECRET || process.env.JWT_SECRET || "linkverse-access-secret";
 const REFRESH_TOKEN_SECRET =
-  process.env.JWT_REFRESH_SECRET || "linkverse-refresh-secret";
+  process.env.JWT_REFRESH_SECRET || process.env.JWT_SECRET || "linkverse-refresh-secret";
 
 export const ACCESS_TOKEN_EXPIRES_IN =
   process.env.JWT_ACCESS_EXPIRES_IN || "15m";

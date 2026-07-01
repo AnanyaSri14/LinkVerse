@@ -25,18 +25,31 @@ dotenv.config();
 const app = express();
 const httpServer = createServer(app);
 
-const clientOrigin = process.env.APP_BASE_URL || "http://localhost:3000";
+const allowedOrigins = [
+  "http://localhost:3000",
+  process.env.CLIENT_URL
+].filter(Boolean);
 
 const io = new SocketIOServer(httpServer, {
   cors: {
-    origin: clientOrigin,
+    origin(origin, callback) {
+      if (!origin || allowedOrigins.includes(origin)) {
+        return callback(null, true);
+      }
+      callback(new Error("Blocked by CORS"));
+    },
     credentials: true
   }
 });
 
 app.use(
   cors({
-    origin: clientOrigin,
+    origin(origin, callback) {
+      if (!origin || allowedOrigins.includes(origin)) {
+        return callback(null, true);
+      }
+      callback(new Error("Blocked by CORS"));
+    },
     credentials: true
   })
 );
@@ -233,7 +246,7 @@ io.on("connection", async (socket) => {
 
 const start = async () => {
   try {
-    await mongoose.connect(process.env.MONGO_URI);
+    await mongoose.connect(process.env.MONGODB_URI || process.env.MONGO_URI);
     const PORT = process.env.PORT || 9090;
     httpServer.listen(PORT, () => {
       console.log(`server is running on port ${PORT}`);

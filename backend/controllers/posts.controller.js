@@ -589,7 +589,7 @@ export const sharePostToUsers = async (req, res) => {
 
     const fallbackShareUrl =
       req.body.shareUrl ||
-      `${process.env.APP_BASE_URL || "http://localhost:3000"}/post/${post._id}`;
+      `${process.env.CLIENT_URL || process.env.APP_BASE_URL || "http://localhost:3000"}/post/${post._id}`;
     const postText = (post.content || post.body || "").trim();
     const messageContent = (req.body.shareText || "").trim() || (
       postText
