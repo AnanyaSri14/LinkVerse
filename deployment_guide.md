@@ -37,7 +37,7 @@ Create these variables in the Render Service Environment settings:
 
 | Variable Name | Value / Notes |
 | :--- | :--- |
-| `MONGODB_URI` | `mongodb+srv://LinkVerse:Ananya%4014@linkverse.egwc8t8.mongodb.net/LinkVerse` |
+| `MONGODB_URI` | *mongodb+srv://&lt;username&gt;:&lt;password&gt;@&lt;cluster&gt;.mongodb.net/LinkVerse* |
 | `JWT_SECRET` | *(Generate a strong 256-bit secret string)* |
 | `NODE_ENV` | `production` |
 | `CLIENT_URL` | *(The production URL of your Vercel frontend, e.g., `https://link-verse.vercel.app`)* |
